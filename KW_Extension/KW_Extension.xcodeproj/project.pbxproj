@@ -16,6 +16,10 @@
 		129E4B2D20BF95120032DCA0 /* KW_ExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B2C20BF95120032DCA0 /* KW_ExtensionTests.m */; };
 		129E4B3820BF95120032DCA0 /* KW_ExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B3720BF95120032DCA0 /* KW_ExtensionUITests.m */; };
 		129E4B4820BF95610032DCA0 /* KW_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4720BF95610032DCA0 /* KW_Extension.m */; };
+		129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4A20BF95E40032DCA0 /* KW_Function.m */; };
+		129E4B4E20BF95F40032DCA0 /* KW_System.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4D20BF95F40032DCA0 /* KW_System.m */; };
+		129E4B5120BF96020032DCA0 /* KW_Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B5020BF96020032DCA0 /* KW_Screen.m */; };
+		129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,14 @@
 		129E4B3920BF95120032DCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129E4B4620BF95610032DCA0 /* KW_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_Extension.h; sourceTree = "<group>"; };
 		129E4B4720BF95610032DCA0 /* KW_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Extension.m; sourceTree = "<group>"; };
+		129E4B4920BF95E40032DCA0 /* KW_Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_Function.h; sourceTree = "<group>"; };
+		129E4B4A20BF95E40032DCA0 /* KW_Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Function.m; sourceTree = "<group>"; };
+		129E4B4C20BF95F40032DCA0 /* KW_System.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_System.h; sourceTree = "<group>"; };
+		129E4B4D20BF95F40032DCA0 /* KW_System.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_System.m; sourceTree = "<group>"; };
+		129E4B4F20BF96020032DCA0 /* KW_Screen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_Screen.h; sourceTree = "<group>"; };
+		129E4B5020BF96020032DCA0 /* KW_Screen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Screen.m; sourceTree = "<group>"; };
+		129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KW_ViewFrame.h"; sourceTree = "<group>"; };
+		129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KW_ViewFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,14 @@
 			children = (
 				129E4B4620BF95610032DCA0 /* KW_Extension.h */,
 				129E4B4720BF95610032DCA0 /* KW_Extension.m */,
+				129E4B4920BF95E40032DCA0 /* KW_Function.h */,
+				129E4B4A20BF95E40032DCA0 /* KW_Function.m */,
+				129E4B4C20BF95F40032DCA0 /* KW_System.h */,
+				129E4B4D20BF95F40032DCA0 /* KW_System.m */,
+				129E4B4F20BF96020032DCA0 /* KW_Screen.h */,
+				129E4B5020BF96020032DCA0 /* KW_Screen.m */,
+				129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */,
+				129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */,
 			);
 			path = KW_Extension;
 			sourceTree = "<group>";
@@ -276,8 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				129E4B1820BF95100032DCA0 /* ViewController.m in Sources */,
+				129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */,
 				129E4B2320BF95120032DCA0 /* main.m in Sources */,
+				129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */,
 				129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */,
+				129E4B4E20BF95F40032DCA0 /* KW_System.m in Sources */,
+				129E4B5120BF96020032DCA0 /* KW_Screen.m in Sources */,
 				129E4B4820BF95610032DCA0 /* KW_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
