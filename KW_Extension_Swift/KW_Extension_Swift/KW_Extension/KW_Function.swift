@@ -273,6 +273,30 @@ public func KWAppleIDFromURL(itunesURL: String?) -> String? {
     return AppleID;
 }
 
+func KWAlert(title: String?, message: String?, sure: String? = "确定", cancle: String? = "取消") -> Void {
+    
+    if #available(iOS 9.0, *) {
+        
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert);
+        
+        let sureAction = UIAlertAction.init(title: sure, style: .default) { (action) in
+            
+        };
+        
+        let cancle = UIAlertAction.init(title: cancle, style: UIAlertActionStyle.cancel) { (action) in
+            
+        };
+        
+        alert.addAction(sureAction);
+        alert.addAction(cancle);
+        
+        KWRootViewController().present(alert, animated: true, completion: nil);
+        
+    } else {
+        let alert = UIAlertView.init(title: title!, message: message!, delegate: nil, cancelButtonTitle: cancle!, otherButtonTitles: sure!);
+        alert.show();
+    }
+}
 
 
 
