@@ -248,6 +248,28 @@ extension String {
         }
     }
     
+    /// 是否为手机号
+    public var isPhoneNumber: Bool {
+        get {
+            let regex = "^134[0-8]\\d{7}$|^13[^4]\\d{8}$|^14[5-9]\\d{8}$|^15[^4]\\d{8}$|^16[6]\\d{8}$|^17[0-8]\\d{8}$|^18[\\d]{9}$|^19[8,9]\\d{8}$";
+            return self.kw_predicateWithString(regex: regex);
+        }
+    }
+    
+    /// 是否为身份证号码
+    var isIDCard: Bool {
+        get {
+            return self.kw_predicateWithString(regex: "^(\\d{14}|\\d{17})(\\d|[xX])$");
+        }
+    }
+    
+    /// 是否为数字
+    var isNumber: Bool {
+        get {
+            return self.kw_predicateWithString(regex: "^[0-9]+(\\.[0-9]{1,2})?$");
+        }
+    }
+    
     /// 计算字符串的大小
     ///
     /// - Parameters:
@@ -276,9 +298,8 @@ extension String {
     ///   - format: 日期格式
     /// - Returns: 时间戳
     func kw_dateStringToTimestamp(format: String) -> String {
-        let dateFormatter = DateFormatter.init();
+        let dateFormatter = DateFormatter.kDateFormatter;
         dateFormatter.dateFormat = format;
-        dateFormatter.timeZone = TimeZone.current;
         let date = dateFormatter.date(from: self);
         return String.init(format: "%.f", (date?.timeIntervalSince1970)!);
     }
@@ -289,8 +310,7 @@ extension String {
     /// - Returns: 日期
     func kw_timestampToDateString(format: String) -> String {
         let date = Date.init(timeIntervalSince1970: Double(self)!);
-        let dateFormatter = DateFormatter.init();
-        dateFormatter.timeZone = TimeZone.current;
+        let dateFormatter = DateFormatter.kDateFormatter;
         dateFormatter.dateFormat = format;
         return dateFormatter.string(from: date);
     }
@@ -322,28 +342,6 @@ extension String {
         } else {
             return timestampString.kw_timestampToDateString(format: format);
         }
-    }
-    
-    /// 检验是否为手机号
-    ///
-    /// - Returns: bool
-    func kw_isPhoneNumber() -> Bool {
-        let regex = "^134[0-8]\\d{7}$|^13[^4]\\d{8}$|^14[5-9]\\d{8}$|^15[^4]\\d{8}$|^16[6]\\d{8}$|^17[0-8]\\d{8}$|^18[\\d]{9}$|^19[8,9]\\d{8}$";
-        return self.kw_predicateWithString(regex: regex);
-    }
-    
-    /// 检验是否为身份证号码
-    ///
-    /// - Returns: bool
-    func kw_isIDCard() -> Bool {
-        return self.kw_predicateWithString(regex: "^(\\d{14}|\\d{17})(\\d|[xX])$");
-    }
-    
-    /// 判断是否为数字
-    ///
-    /// - Returns: bool
-    func kw_isNumber() -> Bool {
-        return self.kw_predicateWithString(regex: "^[0-9]+(\\.[0-9]{1,2})?$");
     }
     
     /// 正则函数
@@ -513,6 +511,17 @@ extension Dictionary {
     public var base64Encode: String? {
         get {
             return KWEncodeBase64(encode: self);
+        }
+    }
+}
+
+extension DateFormatter {
+    
+    static var kDateFormatter: DateFormatter {
+        get {
+            let formatter = DateFormatter.init();
+            formatter.timeZone = TimeZone.current;
+            return formatter;
         }
     }
 }

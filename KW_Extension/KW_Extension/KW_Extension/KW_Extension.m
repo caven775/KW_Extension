@@ -156,29 +156,122 @@
     return (self == nil || self.length == 0 || [self isEqual:[NSNull null]]);
 }
 
+- (BOOL)isPhoneNumber
+{
+    NSString * regex = @"^134[0-8]\\d{7}$|^13[^4]\\d{8}$|^14[5-9]\\d{8}$|^15[^4]\\d{8}$|^16[6]\\d{8}$|^17[0-8]\\d{8}$|^18[\\d]{9}$|^19[8,9]\\d{8}$";
+    return [self kw_predicateWithString:regex];
+}
+
+- (BOOL)isIDCard
+{
+    return [self kw_predicateWithString:@"^(\\d{14}|\\d{17})(\\d|[xX])$"];
+}
+
+- (BOOL)isNumber
+{
+    return [self kw_predicateWithString:@"^[0-9]+(\\.[0-9]{1,2})?$"];
+}
+
 - (NSString *)base64Encode
 {
     return KWEncodeBase64(self);
 }
 
-- (NSString *)base64DecodeString
+- (id)base64Decode
 {
     return KWDecodeBase64(self);
 }
 
-- (UIImage *)base64DecodeImage
+- (CGSize)kw_sizeWithFont:(CGFloat)font size:(CGSize)size bold:(BOOL)bold
 {
-    return KWDecodeBase64(self);
+    UIFont * ft = nil;
+    if (bold) {
+        ft = [UIFont boldSystemFontOfSize:font];
+    } else {
+        ft = [UIFont systemFontOfSize:font];
+    }
+    return [self boundingRectWithSize:size
+                              options:(NSStringDrawingOptions)0
+                           attributes:@{NSFontAttributeName: ft}
+                              context:nil].size;
 }
 
-- (NSArray *)base64DecodeArray
+- (NSString *)kw_dateStringToTimestamp:(NSString *)format
 {
-    return KWDecodeBase64(self);
+    NSDateFormatter * formatter = NSDateFormatter.kDateFormatter;
+    formatter.dateFormat = format;
+    NSDate * date = [formatter dateFromString:self];
+    return [NSString stringWithFormat:@"%.f", [date timeIntervalSince1970]];
 }
 
-- (NSDictionary *)base64DecodeDictionary
+- (NSString *)kw_timestampToDateString:(NSString *)format
 {
-    return KWDecodeBase64(self);
+    NSTimeInterval time = [self doubleValue];
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter * formatter = NSDateFormatter.kDateFormatter;
+    formatter.dateFormat = format;
+    return [formatter stringFromDate:date];
+}
+
+- (NSString *)kw_dateToAnotherDate:(NSString *)format toFormat:(NSString *)anotherFormat
+{
+    NSString * timestamp = [self kw_dateStringToTimestamp:format];
+    return [timestamp kw_timestampToDateString:anotherFormat];
+}
+
++ (NSString *)kw_todayDate:(NSString *)format
+{
+    NSTimeInterval today = [[NSDate date] timeIntervalSince1970];
+    NSString * todayString = [NSString stringWithFormat:@"%.f", today];
+    return [todayString kw_timestampToDateString:format];
+}
+
+- (BOOL)kw_predicateWithString:(NSString *)regex
+{
+    if (self.isEmpty) { return NO;}
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@", regex];
+    return [predicate evaluateWithObject:self];
+}
+
+- (NSString *)kw_format:(NSString *)format roundingMode:(NSNumberFormatterRoundingMode)mode
+{
+    NSNumber * number = [NSNumber numberWithDouble:[format doubleValue]];
+    NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
+    formatter.positiveFormat = format;
+    formatter.roundingMode = mode;
+    return [formatter stringFromNumber:number];
+}
+
+@end
+
+
+@implementation NSArray (KW_Array)
+
+- (NSString *)base64Encode
+{
+    return KWEncodeBase64(self);
+}
+
+@end
+
+
+@implementation NSDictionary (KW_Dictionary)
+
+- (NSString *)base64Encode
+{
+    return KWEncodeBase64(self);
+}
+
+@end
+
+
+@implementation NSDateFormatter (KW_DateFormatter)
+
++ (NSDateFormatter *)kDateFormatter
+{
+    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = NSTimeZone.systemTimeZone;
+    return formatter;
 }
 
 @end

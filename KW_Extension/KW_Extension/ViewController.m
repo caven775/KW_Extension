@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "KW_Extension.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"%@", [NSString kw_todayDate:@"yyyy-MM-dd HH:mm:ss"]);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
