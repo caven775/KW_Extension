@@ -45,3 +45,49 @@ id KWDecodeBase64(NSString * decode)
     decodeObj = [NSJSONSerialization JSONObjectWithData:decodeData options:NSJSONReadingAllowFragments error:nil];
     return decodeObj;
 }
+
+UIViewController * KWRootViewController(void)
+{
+    return [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+}
+
+UINavigationController * KWTopNavigationController(void)
+{
+    UIViewController * rootViewController = KWRootViewController();
+    if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        return (UINavigationController *)rootViewController;
+    } else if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController * tabVC = (UITabBarController *)rootViewController;
+        return (UINavigationController *)[tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
+    } else {
+        return nil;
+    }
+}
+
+UIViewController * KWCurrentVisibleViewController(void)
+{
+    return KWFindVisibleViewController(KWRootViewController());
+}
+
+UIViewController * KWFindVisibleViewController(UIViewController * from)
+{
+    if (from == nil) { return nil;}
+    UIViewController * presented = from.presentedViewController;
+    if (presented != nil) { KWFindVisibleViewController(presented);}
+    
+    if ([from isKindOfClass:[UINavigationController class]]) {
+        UINavigationController * navi = (UINavigationController *)from;
+        if ([navi viewControllers].count) {
+            return KWFindVisibleViewController([navi topViewController]);
+        }
+        return navi;
+    } else if ([from isKindOfClass:[UITabBarController class]]) {
+        UITabBarController * tab = (UITabBarController *)from;
+        if (tab.viewControllers.count) {
+            return KWFindVisibleViewController(tab.selectedViewController);
+        }
+        return tab;
+    } else {
+        return from;
+    }
+}
