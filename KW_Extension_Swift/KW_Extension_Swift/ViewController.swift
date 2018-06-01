@@ -17,7 +17,9 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        KWAlert(title: "我是标题", message: "测试测试一下");
+        
+        print(KW_System.usedDiskSpace);
+        
     }
     
     override func didReceiveMemoryWarning() {

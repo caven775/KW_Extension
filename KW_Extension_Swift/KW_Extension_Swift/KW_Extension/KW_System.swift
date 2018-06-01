@@ -132,4 +132,87 @@ class KW_System: NSObject {
     
 }
 
+// MARK: - 磁盘使用情况
+extension KW_System {
+    
+    /// 总容量，保留两位小数
+    static var totalDiskSpace: String {
+        get {
+            return kw_diskSpace(fileKey: .systemSize);
+        }
+    }
+    
+    /// 已使用容量， 保留两位小数
+    static var usedDiskSpace: String {
+        get {
+            return kw_calculate(size: KW_System.usedDiskSpaceBytes);
+        }
+    }
+    
+    /// 剩余容量， 保留两位小数
+    static var freeDiskSpace: String {
+        get {
+            return kw_diskSpace(fileKey: .systemFreeSize);
+        }
+    }
+    
+    /// 总容量 Bytes
+    static var totalDiskSpaceBytes: Double {
+        get {
+            return kw_diskSpaceBytes(fileKey: .systemSize);
+        }
+    }
+    
+    /// 已使用容量 Bytes
+    static var usedDiskSpaceBytes: Double {
+        get {
+            return KW_System.totalDiskSpaceBytes - KW_System.freeDiskSpaceBytes;
+        }
+    }
+    
+    /// 剩余容量 Bytes
+    static var freeDiskSpaceBytes: Double {
+        get {
+            return kw_diskSpaceBytes(fileKey: .systemFreeSize);
+        }
+    }
+    
+    /// 获取磁盘空间 (Bytes)
+    ///
+    /// - Parameter fileKey: FileAttributeKey
+    /// - Returns: 磁盘大小
+    static private func kw_diskSpaceBytes(fileKey: FileAttributeKey) -> Double {
+        let files = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory());
+        guard (files != nil && files![fileKey] != nil) else { return 0.0;}
+        return ((files![fileKey] as? NSNumber)?.doubleValue)!;
+    }
+    
+    /// 获取磁盘空间（单位换算）
+    ///
+    /// - Parameter fileKey: FileAttributeKey
+    /// - Returns: 磁盘大小
+    static private func kw_diskSpace(fileKey: FileAttributeKey) -> String {
+        let size = KW_System.kw_diskSpaceBytes(fileKey: fileKey);
+        return KW_System.kw_calculate(size: size);
+    }
+    
+    /// 单位换算
+    ///
+    /// - Parameter size: 原始大小
+    /// - Returns: 换算结果
+    static private func kw_calculate(size: Double) -> String {
+        let GB = size / (pow(1024, 3));
+        let MB = size / (pow(1024, 2));
+        if GB >= 1.0 {
+            return String.init(format: "%.2f", GB) + " GB";
+        } else if (MB >= 1.0) {
+            return String.init(format: "%.2f", MB) + " MB";
+        } else {
+            return String.init(format: "%.2f", size) + " bytes";
+        }
+    }
+}
+
+
+
 
