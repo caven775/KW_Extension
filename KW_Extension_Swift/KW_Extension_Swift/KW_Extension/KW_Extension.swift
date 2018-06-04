@@ -234,6 +234,12 @@ extension UIColor {
 
 extension String {
     
+    enum KWScannerType {
+        case Int
+        case Float
+    }
+    
+    
     ///base64 编码
     public var base64Encode: String? {
         get {
@@ -269,6 +275,28 @@ extension String {
             return self.kw_predicateWithString(regex: "^[0-9]+(\\.[0-9]{1,2})?$");
         }
     }
+    
+    /// 是否为Email
+    var isEmail: Bool {
+        get {
+            return self.kw_predicateWithString(regex: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}");
+        }
+    }
+    
+    /// 是否为整数
+    var isInt: Bool {
+        get {
+            return self.kw_scanner(scanType: .Int);
+        }
+    }
+    
+    /// 是否为小数
+    var isFloat: Bool {
+        get {
+            return self.kw_scanner(scanType: .Float);
+        }
+    }
+    
     
     /// 计算字符串的大小
     ///
@@ -397,6 +425,19 @@ extension String {
         let formatString = formatter.string(from: number);
         guard formatString != nil else { return self;}
         return formatString!;
+    }
+    
+    func kw_scanner(scanType: KWScannerType) -> Bool {
+        guard self.isEmpty == false else { return false;}
+        let scan = Scanner.init(string: self);
+        switch scanType {
+        case .Int:
+            var intX: Int = 0;
+            return scan.isAtEnd && scan.scanInt(&intX);
+        case .Float:
+            var floatX: Float = 0.0;
+            return scan.isAtEnd && scan.scanFloat(&floatX);
+        }
     }
 }
 
