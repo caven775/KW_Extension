@@ -91,3 +91,18 @@ UIViewController * KWFindVisibleViewController(UIViewController * from)
         return from;
     }
 }
+
+NSDictionary * KWParametersFromURL(NSString * url)
+{
+    NSMutableDictionary * parameters = [[NSMutableDictionary alloc] initWithCapacity:0];
+    NSURLComponents * component = [[NSURLComponents alloc] initWithString:url];
+    if (!component) { return nil;}
+    for (NSURLQueryItem * item in component.queryItems) {
+        if ([item.value isEqual:[NSNull null]] || !item.value.length || !item.value) {
+            [parameters setValue:[NSNull null] forKey:item.name];
+        } else {
+            [parameters setValue:item.value forKey:item.name];
+        }
+    }
+    return parameters;
+}

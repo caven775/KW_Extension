@@ -57,8 +57,12 @@ FOUNDATION_EXTERN UIViewController * KWCurrentVisibleViewController(void);
  */
 FOUNDATION_EXTERN UIViewController * KWFindVisibleViewController(UIViewController * from);
 
+/**
+ 从url中获取参数，必须为标准url
 
-
-
+ @param url url
+ @return 参数字典
+ */
+FOUNDATION_EXTERN NSDictionary * KWParametersFromURL(NSString * url);
 
 
