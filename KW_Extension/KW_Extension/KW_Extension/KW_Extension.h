@@ -151,7 +151,12 @@
  */
 - (NSString *)kw_format:(NSString *)format roundingMode:(NSNumberFormatterRoundingMode)mode;
 
+/**
+ 从标准url中获取参数
 
+ @return 参数字典
+ */
+- (nullable NSDictionary *)kw_parametersFromURL;
 
 @end
 

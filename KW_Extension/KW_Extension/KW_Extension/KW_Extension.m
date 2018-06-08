@@ -242,6 +242,11 @@
     return [formatter stringFromNumber:number];
 }
 
+- (nullable NSDictionary *)kw_parametersFromURL
+{
+    return KWParametersFromURL(self);
+}
+
 @end
 
 

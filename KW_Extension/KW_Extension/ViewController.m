@@ -22,7 +22,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%@", [NSString kw_todayDate:@"yyyy-MM-dd HH:mm:ss"]);
+
 }
 
 - (void)didReceiveMemoryWarning {
