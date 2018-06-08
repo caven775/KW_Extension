@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#ifdef DEBUG
+# define KWLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] " fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define KWLog(...);
+#endif
+
 @interface KW_Function : NSObject
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		128C9B6620CA6C6300993B9B /* NSArray+KW_SafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */; };
+		128C9B6920CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6820CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m */; };
+		128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6B20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m */; };
 		129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B1420BF95100032DCA0 /* AppDelegate.m */; };
 		129E4B1820BF95100032DCA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B1720BF95100032DCA0 /* ViewController.m */; };
 		129E4B1B20BF95100032DCA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 129E4B1920BF95100032DCA0 /* Main.storyboard */; };
@@ -40,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+KW_SafeArray.h"; sourceTree = "<group>"; };
+		128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KW_SafeArray.m"; sourceTree = "<group>"; };
+		128C9B6720CA6CC800993B9B /* NSObject+KW_MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KW_MethodSwizzling.h"; sourceTree = "<group>"; };
+		128C9B6820CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KW_MethodSwizzling.m"; sourceTree = "<group>"; };
+		128C9B6A20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KW_SafeDictionary.h"; sourceTree = "<group>"; };
+		128C9B6B20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KW_SafeDictionary.m"; sourceTree = "<group>"; };
 		129E4B1020BF95100032DCA0 /* KW_Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KW_Extension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129E4B1320BF95100032DCA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		129E4B1420BF95100032DCA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +170,12 @@
 				129E4B5020BF96020032DCA0 /* KW_Screen.m */,
 				129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */,
 				129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */,
+				128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */,
+				128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */,
+				128C9B6A20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.h */,
+				128C9B6B20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m */,
+				128C9B6720CA6CC800993B9B /* NSObject+KW_MethodSwizzling.h */,
+				128C9B6820CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m */,
 			);
 			path = KW_Extension;
 			sourceTree = "<group>";
@@ -295,11 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128C9B6620CA6C6300993B9B /* NSArray+KW_SafeArray.m in Sources */,
 				129E4B1820BF95100032DCA0 /* ViewController.m in Sources */,
 				129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */,
 				129E4B2320BF95120032DCA0 /* main.m in Sources */,
+				128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */,
 				129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */,
 				129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */,
+				128C9B6920CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m in Sources */,
 				129E4B4E20BF95F40032DCA0 /* KW_System.m in Sources */,
 				129E4B5120BF96020032DCA0 /* KW_Screen.m in Sources */,
 				129E4B4820BF95610032DCA0 /* KW_Extension.m in Sources */,
@@ -474,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q678824HMX;
 				INFOPLIST_FILE = KW_Extension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q678824HMX;
 				INFOPLIST_FILE = KW_Extension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
