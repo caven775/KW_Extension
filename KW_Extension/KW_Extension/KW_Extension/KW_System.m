@@ -10,4 +10,9 @@
 
 @implementation KW_System
 
++ (NSString *)appVersion
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
+
 @end
