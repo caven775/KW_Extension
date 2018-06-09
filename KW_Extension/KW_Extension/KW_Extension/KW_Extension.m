@@ -154,7 +154,7 @@
 
 - (BOOL)isEmpty
 {
-    return (self == nil || self.length == 0 || [self isEqual:[NSNull null]]);
+    return (self.length == 0 || [self isEqual:[NSNull null]]);
 }
 
 - (BOOL)isPhoneNumber

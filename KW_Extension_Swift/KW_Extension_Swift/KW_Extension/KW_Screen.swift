@@ -95,7 +95,7 @@ class KW_Screen: NSObject {
     ///
     /// - Parameter size: iphone5s 时的尺寸
     /// - Returns: 相对应的比例尺寸
-    func kw_scale_5s(size: CGFloat) -> CGFloat {
+    static func kw_scale_5s(size: CGFloat) -> CGFloat {
         return KW_Screen.width * (size / 320.0);
     }
     
