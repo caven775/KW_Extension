@@ -258,6 +258,25 @@
     return KWEncodeBase64(self);
 }
 
+- (NSArray *)kw_allObjects
+{
+    if (!self.count) { return @[];}
+    NSMutableArray * array = [[NSMutableArray alloc] initWithCapacity:0];
+    [self kw_objectInArray:self toArray:array];
+    return array;
+}
+
+- (void)kw_objectInArray:(NSArray *)array toArray:(NSMutableArray *)toArray
+{
+    for (id element in array) {
+        if ([element isKindOfClass:[self class]]) {
+            [self kw_objectInArray:element toArray:toArray];
+        } else {
+            [toArray addObject:element];
+        }
+    }
+}
+
 @end
 
 

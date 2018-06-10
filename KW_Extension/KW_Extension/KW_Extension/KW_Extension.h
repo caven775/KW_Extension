@@ -166,6 +166,9 @@
 
 @property (nonatomic, copy, readonly) NSString * base64Encode;
 
+
+- (NSArray *)kw_allObjects;
+
 @end
 
 
