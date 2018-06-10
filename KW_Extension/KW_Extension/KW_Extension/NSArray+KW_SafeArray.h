@@ -11,3 +11,8 @@
 @interface NSArray (KW_SafeArray)
 
 @end
+
+
+@interface NSMutableArray (KW_SafeMutableArray)
+
+@end
