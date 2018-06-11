@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1263A48A20CE5290001143B4 /* KW_AppDelegateModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A48920CE5290001143B4 /* KW_AppDelegateModule.m */; };
+		1263A48C20CE5670001143B4 /* KW_Modules.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1263A48B20CE5670001143B4 /* KW_Modules.plist */; };
+		1263A48F20CE5910001143B4 /* KW_NotificationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A48E20CE5910001143B4 /* KW_NotificationModule.m */; };
+		1263A49220CE5920001143B4 /* KW_AppVersionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A49120CE5920001143B4 /* KW_AppVersionModule.m */; };
+		1263A49520CE5939001143B4 /* KW_UserLocationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A49420CE5939001143B4 /* KW_UserLocationModule.m */; };
+		1263A49820CE5CD1001143B4 /* KW_ThirdPlatformModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A49720CE5CD1001143B4 /* KW_ThirdPlatformModule.m */; };
+		1263A49B20CE5D07001143B4 /* KW_BaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1263A49A20CE5D07001143B4 /* KW_BaseModule.m */; };
 		128C9B6620CA6C6300993B9B /* NSArray+KW_SafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */; };
 		128C9B6920CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6820CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m */; };
 		128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 128C9B6B20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m */; };
@@ -43,6 +50,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1263A48820CE5290001143B4 /* KW_AppDelegateModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_AppDelegateModule.h; sourceTree = "<group>"; };
+		1263A48920CE5290001143B4 /* KW_AppDelegateModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_AppDelegateModule.m; sourceTree = "<group>"; };
+		1263A48B20CE5670001143B4 /* KW_Modules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KW_Modules.plist; sourceTree = "<group>"; };
+		1263A48D20CE5910001143B4 /* KW_NotificationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_NotificationModule.h; sourceTree = "<group>"; };
+		1263A48E20CE5910001143B4 /* KW_NotificationModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_NotificationModule.m; sourceTree = "<group>"; };
+		1263A49020CE5920001143B4 /* KW_AppVersionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_AppVersionModule.h; sourceTree = "<group>"; };
+		1263A49120CE5920001143B4 /* KW_AppVersionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_AppVersionModule.m; sourceTree = "<group>"; };
+		1263A49320CE5939001143B4 /* KW_UserLocationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_UserLocationModule.h; sourceTree = "<group>"; };
+		1263A49420CE5939001143B4 /* KW_UserLocationModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_UserLocationModule.m; sourceTree = "<group>"; };
+		1263A49620CE5CD1001143B4 /* KW_ThirdPlatformModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_ThirdPlatformModule.h; sourceTree = "<group>"; };
+		1263A49720CE5CD1001143B4 /* KW_ThirdPlatformModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_ThirdPlatformModule.m; sourceTree = "<group>"; };
+		1263A49920CE5D07001143B4 /* KW_BaseModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_BaseModule.h; sourceTree = "<group>"; };
+		1263A49A20CE5D07001143B4 /* KW_BaseModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_BaseModule.m; sourceTree = "<group>"; };
 		128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+KW_SafeArray.h"; sourceTree = "<group>"; };
 		128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KW_SafeArray.m"; sourceTree = "<group>"; };
 		128C9B6720CA6CC800993B9B /* NSObject+KW_MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KW_MethodSwizzling.h"; sourceTree = "<group>"; };
@@ -102,6 +122,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1263A48720CE524A001143B4 /* KW_AppDelegateModule */ = {
+			isa = PBXGroup;
+			children = (
+				1263A48B20CE5670001143B4 /* KW_Modules.plist */,
+				1263A49920CE5D07001143B4 /* KW_BaseModule.h */,
+				1263A49A20CE5D07001143B4 /* KW_BaseModule.m */,
+				1263A48820CE5290001143B4 /* KW_AppDelegateModule.h */,
+				1263A48920CE5290001143B4 /* KW_AppDelegateModule.m */,
+			);
+			path = KW_AppDelegateModule;
+			sourceTree = "<group>";
+		};
 		129E4B0720BF95100032DCA0 = {
 			isa = PBXGroup;
 			children = (
@@ -125,11 +157,20 @@
 		129E4B1220BF95100032DCA0 /* KW_Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1263A48720CE524A001143B4 /* KW_AppDelegateModule */,
 				129E4B4520BF95470032DCA0 /* KW_Extension */,
 				129E4B1320BF95100032DCA0 /* AppDelegate.h */,
 				129E4B1420BF95100032DCA0 /* AppDelegate.m */,
 				129E4B1620BF95100032DCA0 /* ViewController.h */,
 				129E4B1720BF95100032DCA0 /* ViewController.m */,
+				1263A48D20CE5910001143B4 /* KW_NotificationModule.h */,
+				1263A48E20CE5910001143B4 /* KW_NotificationModule.m */,
+				1263A49020CE5920001143B4 /* KW_AppVersionModule.h */,
+				1263A49120CE5920001143B4 /* KW_AppVersionModule.m */,
+				1263A49320CE5939001143B4 /* KW_UserLocationModule.h */,
+				1263A49420CE5939001143B4 /* KW_UserLocationModule.m */,
+				1263A49620CE5CD1001143B4 /* KW_ThirdPlatformModule.h */,
+				1263A49720CE5CD1001143B4 /* KW_ThirdPlatformModule.m */,
 				129E4B1920BF95100032DCA0 /* Main.storyboard */,
 				129E4B1C20BF95120032DCA0 /* Assets.xcassets */,
 				129E4B1E20BF95120032DCA0 /* LaunchScreen.storyboard */,
@@ -283,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1263A48C20CE5670001143B4 /* KW_Modules.plist in Resources */,
 				129E4B2020BF95120032DCA0 /* LaunchScreen.storyboard in Resources */,
 				129E4B1D20BF95120032DCA0 /* Assets.xcassets in Resources */,
 				129E4B1B20BF95100032DCA0 /* Main.storyboard in Resources */,
@@ -311,11 +353,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				128C9B6620CA6C6300993B9B /* NSArray+KW_SafeArray.m in Sources */,
+				1263A49B20CE5D07001143B4 /* KW_BaseModule.m in Sources */,
 				129E4B1820BF95100032DCA0 /* ViewController.m in Sources */,
+				1263A49520CE5939001143B4 /* KW_UserLocationModule.m in Sources */,
 				129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */,
 				129E4B2320BF95120032DCA0 /* main.m in Sources */,
+				1263A49220CE5920001143B4 /* KW_AppVersionModule.m in Sources */,
+				1263A48A20CE5290001143B4 /* KW_AppDelegateModule.m in Sources */,
 				128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */,
 				129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */,
+				1263A48F20CE5910001143B4 /* KW_NotificationModule.m in Sources */,
+				1263A49820CE5CD1001143B4 /* KW_ThirdPlatformModule.m in Sources */,
 				129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */,
 				128C9B6920CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m in Sources */,
 				129E4B4E20BF95F40032DCA0 /* KW_System.m in Sources */,

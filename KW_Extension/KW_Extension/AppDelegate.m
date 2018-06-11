@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "KW_AppDelegateModule.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,21 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"KW_Modules" ofType:@"plist"];
+    
+    [[KW_AppDelegateModule sharedModule] loadModulesWithPlistFile:path];
+    
+    [[KW_AppDelegateModule sharedModule] application:application willFinishLaunchingWithOptions:launchOptions];
+    
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[KW_AppDelegateModule sharedModule] application:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 

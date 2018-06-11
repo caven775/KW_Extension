@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>module_level</key>
+		<integer>102</integer>
+		<key>module_name</key>
+		<string>KW_ThirdPlatformModule</string>
+	</dict>
+	<dict>
+		<key>module_level</key>
+		<integer>200</integer>
+		<key>module_name</key>
+		<string>KW_NotificationModule</string>
+	</dict>
+	<dict>
+		<key>module_level</key>
+		<integer>100</integer>
+		<key>module_name</key>
+		<string>KW_AppVersionModule</string>
+	</dict>
+	<dict>
+		<key>module_level</key>
+		<integer>0</integer>
+		<key>module_name</key>
+		<string>KW_UserLocationModule</string>
+	</dict>
+</array>
+</plist>
