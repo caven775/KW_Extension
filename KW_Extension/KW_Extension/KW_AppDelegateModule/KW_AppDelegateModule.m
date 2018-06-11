@@ -45,7 +45,6 @@
     for (NSDictionary * module in modules) {
         NSString * module_name = module[@"module_name"];
         if (!(!module_name.length || !module_name || [module_name isEqual:[NSNull null]])) {
-            //有module_name
             Class class = NSClassFromString(module_name);
             if (class != NULL) {
                 id<KW_Module> x = [[class alloc] init];
