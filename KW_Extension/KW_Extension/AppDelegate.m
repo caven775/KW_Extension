@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "KW_AppDelegateModule.h"
+#import "KW_ModuleManager.h"
+
 
 @interface AppDelegate ()
 

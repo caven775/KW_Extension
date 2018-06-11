@@ -63,6 +63,7 @@
 		1263A49720CE5CD1001143B4 /* KW_ThirdPlatformModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_ThirdPlatformModule.m; sourceTree = "<group>"; };
 		1263A49920CE5D07001143B4 /* KW_BaseModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_BaseModule.h; sourceTree = "<group>"; };
 		1263A49A20CE5D07001143B4 /* KW_BaseModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_BaseModule.m; sourceTree = "<group>"; };
+		1263A49C20CE7797001143B4 /* KW_ModuleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_ModuleManager.h; sourceTree = "<group>"; };
 		128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+KW_SafeArray.h"; sourceTree = "<group>"; };
 		128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KW_SafeArray.m"; sourceTree = "<group>"; };
 		128C9B6720CA6CC800993B9B /* NSObject+KW_MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KW_MethodSwizzling.h"; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				1263A48B20CE5670001143B4 /* KW_Modules.plist */,
 				1263A49920CE5D07001143B4 /* KW_BaseModule.h */,
 				1263A49A20CE5D07001143B4 /* KW_BaseModule.m */,
+				1263A49C20CE7797001143B4 /* KW_ModuleManager.h */,
 				1263A48820CE5290001143B4 /* KW_AppDelegateModule.h */,
 				1263A48920CE5290001143B4 /* KW_AppDelegateModule.m */,
 			);
