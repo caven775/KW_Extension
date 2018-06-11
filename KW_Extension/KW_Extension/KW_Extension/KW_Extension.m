@@ -47,6 +47,35 @@
     return img;
 }
 
+
+- (NSArray *)kw_allSubViews
+{
+    NSMutableArray * views = [[NSMutableArray alloc] initWithCapacity:0];
+    [self kw_ergodicSubView:self views:views];
+    return views;
+}
+
+- (NSMutableArray *)kw_viewWithSubViews:(UIView *)view views:(NSMutableArray *)views
+{
+    if (view == nil) {
+        return views;
+    } else if (!view.subviews.count) {
+        [views addObject:view];
+    } else {
+        [views addObject:view];
+        [self kw_ergodicSubView:view views:views];
+    }
+    return views;
+}
+
+- (void)kw_ergodicSubView:(UIView *)view views:(NSMutableArray *)views
+{
+    for (UIView * subView in view.subviews) {
+        [self kw_viewWithSubViews:subView views:views];
+    }
+}
+
+
 @end
 
 

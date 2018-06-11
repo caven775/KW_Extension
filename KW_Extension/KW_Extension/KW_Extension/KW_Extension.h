@@ -47,6 +47,12 @@
  */
 - (UIImage *)kw_screenShot;
 
+/**
+ 获取所有子view
+
+ @return views
+ */
+- (NSArray *)kw_allSubViews;
 
 @end
 
