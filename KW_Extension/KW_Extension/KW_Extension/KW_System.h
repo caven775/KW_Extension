@@ -13,5 +13,8 @@
 @property (nonatomic, copy, readonly, class) NSString * appVersion;
 @property (nonatomic, copy, readonly, class) NSString * appBuildVersion;
 @property (nonatomic, copy, readonly, class) NSString * UUID;
+@property (nonatomic, copy, readonly, class) NSString * projectName;
+@property (nonatomic, copy, readonly, class) NSString * bundleIdentifier;
+@property (nonatomic, copy, readonly, class) NSString * deviceVersion;
 
 @end

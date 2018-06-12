@@ -25,4 +25,19 @@
     return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 }
 
++ (NSString *)projectName
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+}
+
++ (NSString *)bundleIdentifier
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+}
+
++ (NSString *)deviceVersion
+{
+    return [[UIDevice currentDevice] systemVersion];
+}
+
 @end
