@@ -55,7 +55,7 @@
     return views;
 }
 
-- (NSMutableArray *)kw_viewWithSubViews:(UIView *)view views:(NSMutableArray *)views
+- (NSMutableArray *)kw_viewsWithSubView:(UIView *)view views:(NSMutableArray *)views
 {
     if (view == nil) {
         return views;
@@ -71,7 +71,7 @@
 - (void)kw_ergodicSubView:(UIView *)view views:(NSMutableArray *)views
 {
     for (UIView * subView in view.subviews) {
-        [self kw_viewWithSubViews:subView views:views];
+        [self kw_viewsWithSubView:subView views:views];
     }
 }
 
