@@ -30,6 +30,7 @@
 		129E4B4E20BF95F40032DCA0 /* KW_System.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4D20BF95F40032DCA0 /* KW_System.m */; };
 		129E4B5120BF96020032DCA0 /* KW_Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B5020BF96020032DCA0 /* KW_Screen.m */; };
 		129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */; };
+		3E691CB120CFF51E00CC3E29 /* HXMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E691CB020CFF51E00CC3E29 /* HXMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		129E4B5020BF96020032DCA0 /* KW_Screen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Screen.m; sourceTree = "<group>"; };
 		129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KW_ViewFrame.h"; sourceTree = "<group>"; };
 		129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KW_ViewFrame.m"; sourceTree = "<group>"; };
+		3E691CAF20CFF51E00CC3E29 /* HXMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXMaker.h; sourceTree = "<group>"; };
+		3E691CB020CFF51E00CC3E29 /* HXMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,8 @@
 				129E4B4D20BF95F40032DCA0 /* KW_System.m */,
 				129E4B4F20BF96020032DCA0 /* KW_Screen.h */,
 				129E4B5020BF96020032DCA0 /* KW_Screen.m */,
+				3E691CAF20CFF51E00CC3E29 /* HXMaker.h */,
+				3E691CB020CFF51E00CC3E29 /* HXMaker.m */,
 				129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */,
 				129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */,
 				128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */,
@@ -360,6 +365,7 @@
 				1263A49520CE5939001143B4 /* KW_UserLocationModule.m in Sources */,
 				129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */,
 				129E4B2320BF95120032DCA0 /* main.m in Sources */,
+				3E691CB120CFF51E00CC3E29 /* HXMaker.m in Sources */,
 				1263A49220CE5920001143B4 /* KW_AppVersionModule.m in Sources */,
 				1263A48A20CE5290001143B4 /* KW_AppDelegateModule.m in Sources */,
 				128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */,

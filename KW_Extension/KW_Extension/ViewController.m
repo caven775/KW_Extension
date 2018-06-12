@@ -22,8 +22,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSArray * array = @[@"1", @"2", @"4", @[@"33", @"555"], @"0000"];
-    KWLog(@"array == %@", [array kw_allObjects]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
