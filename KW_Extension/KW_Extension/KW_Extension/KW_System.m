@@ -20,4 +20,9 @@
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
++ (NSString *)UUID
+{
+    return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+}
+
 @end
