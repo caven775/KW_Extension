@@ -11,5 +11,6 @@
 @interface KW_System : NSObject
 
 @property (nonatomic, copy, readonly, class) NSString * appVersion;
+@property (nonatomic, copy, readonly, class) NSString * appBuildVersion;
 
 @end
