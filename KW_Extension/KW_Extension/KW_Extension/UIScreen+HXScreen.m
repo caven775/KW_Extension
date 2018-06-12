@@ -1,29 +1,29 @@
 //
-//  KW_Screen.m
+//  UIScreen+HXScreen.m
 //  KW_Extension
 //
-//  Created by LKW on 2018/5/31.
+//  Created by 林克文 on 2018/6/12.
 //  Copyright © 2018年 Udo. All rights reserved.
 //
 
-#import "KW_Screen.h"
+#import "UIScreen+HXScreen.h"
 #import "KW_Function.h"
 
-@implementation KW_Screen
+@implementation UIScreen (HXScreen)
 
-+ (CGRect)bounds
++ (CGRect)hxBounds
 {
-    return [[UIScreen mainScreen] bounds];
+    return [[self mainScreen] bounds];
 }
 
-+ (CGFloat)width
++ (CGFloat)hxWidth
 {
-    return KW_Screen.bounds.size.width;
+    return UIScreen.hxBounds.size.width;
 }
 
-+ (CGFloat)height
++ (CGFloat)hxHeight
 {
-    return KW_Screen.bounds.size.height;
+    return UIScreen.hxBounds.size.height;
 }
 
 + (CGFloat)statusBarHeight
@@ -33,7 +33,7 @@
 
 + (CGFloat)topHeight
 {
-    CGFloat statusBarH = KW_Screen.statusBarHeight;
+    CGFloat statusBarH = UIScreen.statusBarHeight;
     UINavigationController * navi = KWTopNavigationController();
     if (navi) {
         CGFloat max = 0.0;
@@ -54,23 +54,23 @@
 
 + (CGFloat)safeAreaHeightN
 {
-    return KW_Screen.height - KW_Screen.topHeight;
+    return UIScreen.hxHeight - UIScreen.topHeight;
 }
 
 + (CGFloat)safeAreaHeightT
 {
-    return KW_Screen.height - KW_Screen.topHeight - KW_Screen.tabBarHeight;
+    return UIScreen.hxHeight - UIScreen.topHeight - UIScreen.tabBarHeight;
 }
 
 
-+ (CGFloat)kw_scale_6:(CGFloat)size
++ (CGFloat)hx_scale_6:(CGFloat)size
 {
-    return KW_Screen.width * (size/375.0);
+    return UIScreen.hxWidth * (size/375.0);
 }
 
-+ (CGFloat)kw_scale_5s:(CGFloat)size
++ (CGFloat)hx_scale_5s:(CGFloat)size
 {
-    return KW_Screen.width * (size/320.0);
+    return UIScreen.hxWidth * (size/320.0);
 }
 
 @end
