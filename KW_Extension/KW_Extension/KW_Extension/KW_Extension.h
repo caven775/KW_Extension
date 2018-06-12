@@ -33,6 +33,9 @@
 
 @interface UIView (KW_View)
 
+
+@property (nonatomic, copy, readonly) NSArray <UIView *>* allSubViews;
+
 /**
  从xib加载view
 

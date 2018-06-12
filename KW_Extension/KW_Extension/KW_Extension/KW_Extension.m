@@ -32,6 +32,11 @@
 
 @implementation UIView (KW_View)
 
+- (NSArray<UIView *> *)allSubViews
+{
+    return [self kw_allSubViews];
+}
+
 + (instancetype)kw_loadFromNib
 {
     NSBundle * bundle = [NSBundle bundleForClass:self];
