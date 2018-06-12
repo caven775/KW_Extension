@@ -13,6 +13,10 @@
 
 @end
 
+
+/**
+ 模块化管理appdelegate，在开源库FRDModuleManager的基础上扩展了一些内容
+ */
 @interface KW_AppDelegateModule : NSObject <KW_Module>
 
 + (instancetype)sharedModule;
