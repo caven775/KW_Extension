@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong, readonly) UILabel * lInstall;
 @property (nonatomic, strong, readonly) UIButton * bInstall;
+@property (nonatomic, strong, readonly) UIImageView * iInstall;
 
 @end
 
@@ -43,6 +44,12 @@
 @end
 
 
+@interface HXMaker (UIImageView)
+
+@property (nonatomic, copy, readonly) HXMaker * (^iFrame)(CGRect frame);
+@property (nonatomic, copy, readonly) HXMaker * (^image)(UIImage * image);
+
+@end
 
 
 
@@ -54,6 +61,13 @@
 
 
 @interface UIButton (HXMaker)
+
+@property (nonatomic, strong, readonly, class) HXMaker * maker;
+
+@end
+
+
+@interface UIImageView (HXMaker)
 
 @property (nonatomic, strong, readonly, class) HXMaker * maker;
 

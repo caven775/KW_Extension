@@ -30,6 +30,11 @@
     return self.button;
 }
 
+- (UIImageView *)iInstall
+{
+    return self.imageView;
+}
+
 @end
 
 
@@ -168,6 +173,26 @@
     };
 }
 
+@end
+
+
+@implementation HXMaker (UIImageView)
+
+- (HXMaker *(^)(CGRect))iFrame
+{
+    return ^(CGRect frame) {
+        self.imageView.frame = frame;
+        return self;
+    };
+}
+
+- (HXMaker *(^)(UIImage *))image
+{
+    return ^(UIImage * image) {
+        self.imageView.image = image;
+        return self;
+    };
+}
 
 @end
 
@@ -191,6 +216,18 @@
 {
     HXMaker * make = [[HXMaker alloc] init];
     make.button = [UIButton buttonWithType:UIButtonTypeCustom];
+    return make;
+}
+
+@end
+
+
+@implementation UIImageView (HXMaker)
+
++ (HXMaker *)maker
+{
+    HXMaker * make = [[HXMaker alloc] init];
+    make.imageView = [[UIImageView alloc] init];
     return make;
 }
 
