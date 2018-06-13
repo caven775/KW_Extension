@@ -186,13 +186,47 @@
     };
 }
 
-- (HXMaker *(^)(UIImage *))image
+- (HXMaker *(^)(UIImage *))iImage
 {
     return ^(UIImage * image) {
         self.imageView.image = image;
         return self;
     };
 }
+
+@end
+
+
+@implementation HXMaker (UITextField)
+
+- (HXMaker *(^)(CGRect))tFrame
+{
+    return ^(CGRect frame) {
+        self.textfield.frame = frame;
+        return self;
+    };
+}
+
+- (HXMaker *(^)(UIFont *))tFont
+{
+    return ^(UIFont * font) {
+        self.textfield.font = font;
+        return self;
+    };
+}
+
+- (HXMaker *(^)(UIColor *))tTextColor
+{
+    return ^(UIColor * color) {
+        self.textfield.textColor = color;
+        return self;
+    };
+}
+
+@end
+
+
+@implementation HXMaker (UITextView)
 
 @end
 
