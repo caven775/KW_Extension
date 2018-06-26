@@ -47,24 +47,9 @@
 @interface HXMaker (UIImageView)
 
 @property (nonatomic, copy, readonly) HXMaker * (^iFrame)(CGRect frame);
-@property (nonatomic, copy, readonly) HXMaker * (^iImage)(UIImage * image);
+@property (nonatomic, copy, readonly) HXMaker * (^image)(UIImage * image);
 
 @end
-
-
-@interface HXMaker (UITextField)
-
-@property (nonatomic, copy, readonly) HXMaker * (^tFrame)(CGRect frame);
-@property (nonatomic, copy, readonly) HXMaker * (^tFont)(UIFont * font);
-@property (nonatomic, copy, readonly) HXMaker * (^tTextColor)(UIColor * color);
-
-@end
-
-
-@interface HXMaker (UITextView)
-
-@end
-
 
 
 
