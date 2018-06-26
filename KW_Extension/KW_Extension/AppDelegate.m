@@ -24,6 +24,8 @@
     
     [[KW_AppDelegateModule sharedModule] application:application willFinishLaunchingWithOptions:launchOptions];
     
+    NSLog(@"回滚前");
+    
     return YES;
 }
 
