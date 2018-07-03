@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KW_Function.h"
-#import "UIView+KW_ViewFrame.h"
-
 
 @interface KW_Extension : NSObject
+
+@end
+
+@interface UIDevice (HXDeviceInfo)
+
+@property (nonatomic, copy, readonly, class) NSString * UUID;
+@property (nonatomic, copy, readonly, class) NSString * appVersion;
+@property (nonatomic, copy, readonly, class) NSString * appBuildVersion;
+@property (nonatomic, copy, readonly, class) NSString * projectName;
+@property (nonatomic, copy, readonly, class) NSString * bundleIdentifier;
+@property (nonatomic, copy, readonly, class) NSString * deviceVersion;
 
 @end
 
@@ -36,12 +44,6 @@
 
 @property (nonatomic, copy, readonly) NSArray <UIView *>* allSubViews;
 
-/**
- 从xib加载view
-
- @return view
- */
-+ (instancetype)kw_loadFromNib;
 
 /**
  对当前view 截屏

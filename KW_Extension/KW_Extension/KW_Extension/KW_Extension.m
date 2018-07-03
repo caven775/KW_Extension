@@ -7,9 +7,45 @@
 //
 
 #import "KW_Extension.h"
+#import "KW_Function.h"
+#import "UIView+KW_ViewFrame.h"
 #import <objc/runtime.h>
 
 @implementation KW_Extension
+
+@end
+
+@implementation UIDevice (HXDeviceInfo)
+
++ (NSString *)appVersion
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+}
+
++ (NSString *)appBuildVersion
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+}
+
++ (NSString *)UUID
+{
+    return [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+}
+
++ (NSString *)projectName
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+}
+
++ (NSString *)bundleIdentifier
+{
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+}
+
++ (NSString *)deviceVersion
+{
+    return [[UIDevice currentDevice] systemVersion];
+}
 
 @end
 
@@ -35,12 +71,6 @@
 - (NSArray<UIView *> *)allSubViews
 {
     return [self kw_allSubViews];
-}
-
-+ (instancetype)kw_loadFromNib
-{
-    NSBundle * bundle = [NSBundle bundleForClass:self];
-    return [[bundle loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
 - (UIImage *)kw_screenShot

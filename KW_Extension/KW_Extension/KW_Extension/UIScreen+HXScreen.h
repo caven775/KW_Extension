@@ -16,8 +16,8 @@
 @property (nonatomic, assign, readonly, class) CGFloat topHeight;
 @property (nonatomic, assign, readonly, class) CGFloat tabBarHeight;
 @property (nonatomic, assign, readonly, class) CGFloat statusBarHeight;
-@property (nonatomic, assign, readonly, class) CGFloat safeAreaHeightT;
-@property (nonatomic, assign, readonly, class) CGFloat safeAreaHeightN;
+@property (nonatomic, assign, readonly, class) CGFloat safeAreaHeightTabBar;
+@property (nonatomic, assign, readonly, class) CGFloat safeAreaHeightNoneTabBar;
 
 + (CGFloat)hx_scale_6:(CGFloat)size;
 + (CGFloat)hx_scale_5s:(CGFloat)size;

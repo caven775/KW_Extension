@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "KW_ModuleManager.h"
-
+#import "HXExtensionHeader.h"
 
 @interface AppDelegate ()
 

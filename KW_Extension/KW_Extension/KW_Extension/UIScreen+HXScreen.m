@@ -7,7 +7,7 @@
 //
 
 #import "UIScreen+HXScreen.h"
-#import "KW_Function.h"
+
 
 @implementation UIScreen (HXScreen)
 
@@ -34,7 +34,7 @@
 + (CGFloat)topHeight
 {
     CGFloat statusBarH = UIScreen.statusBarHeight;
-    UINavigationController * navi = KWTopNavigationController();
+    UINavigationController * navi = [self HXTopNavigationController];
     if (navi) {
         CGFloat max = 0.0;
         CGFloat naviH = navi.navigationBar.frame.size.height;
@@ -48,16 +48,16 @@
 
 + (CGFloat)tabBarHeight
 {
-    UITabBarController * tab = (UITabBarController *)KWRootViewController();
+    UITabBarController * tab = (UITabBarController *)[self HXRootViewController];;
     return tab.tabBar.frame.size.height;
 }
 
-+ (CGFloat)safeAreaHeightN
++ (CGFloat)safeAreaHeightNoneTabBar
 {
     return UIScreen.hxHeight - UIScreen.topHeight;
 }
 
-+ (CGFloat)safeAreaHeightT
++ (CGFloat)safeAreaHeightTabBar
 {
     return UIScreen.hxHeight - UIScreen.topHeight - UIScreen.tabBarHeight;
 }
@@ -71,6 +71,24 @@
 + (CGFloat)hx_scale_5s:(CGFloat)size
 {
     return UIScreen.hxWidth * (size/320.0);
+}
+
++ (UINavigationController *)HXTopNavigationController
+{
+    UIViewController * rootViewController = [self HXRootViewController];
+    if ([rootViewController isKindOfClass:[UINavigationController class]]) {
+        return (UINavigationController *)rootViewController;
+    } else if ([rootViewController isKindOfClass:[UITabBarController class]]) {
+        UITabBarController * tabVC = (UITabBarController *)rootViewController;
+        return (UINavigationController *)[tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
+    } else {
+        return nil;
+    }
+}
+
++ (UIViewController *)HXRootViewController
+{
+    return [[[[UIApplication sharedApplication] delegate] window] rootViewController];
 }
 
 @end
