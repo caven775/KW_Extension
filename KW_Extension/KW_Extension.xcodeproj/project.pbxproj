@@ -100,6 +100,8 @@
 		3E691CB020CFF51E00CC3E29 /* HXMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXMaker.m; sourceTree = "<group>"; };
 		3E691CB220D00CFF00CC3E29 /* UIScreen+HXScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+HXScreen.h"; sourceTree = "<group>"; };
 		3E691CB320D00CFF00CC3E29 /* UIScreen+HXScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+HXScreen.m"; sourceTree = "<group>"; };
+		3FADABFF20ECC40000CC8476 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
+		3FADAC0020ECC40000CC8476 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		129E4B4520BF95470032DCA0 /* KW_Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3FADABFE20ECC40000CC8476 /* RACDefine */,
 				3E26484820EBBA4E00595655 /* HXExtensionHeader.h */,
 				129E4B4620BF95610032DCA0 /* KW_Extension.h */,
 				129E4B4720BF95610032DCA0 /* KW_Extension.m */,
@@ -228,6 +231,15 @@
 				128C9B6820CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m */,
 			);
 			path = KW_Extension;
+			sourceTree = "<group>";
+		};
+		3FADABFE20ECC40000CC8476 /* RACDefine */ = {
+			isa = PBXGroup;
+			children = (
+				3FADABFF20ECC40000CC8476 /* RACEXTScope.h */,
+				3FADAC0020ECC40000CC8476 /* RACmetamacros.h */,
+			);
+			path = RACDefine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

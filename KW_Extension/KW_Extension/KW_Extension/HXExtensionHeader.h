@@ -14,5 +14,6 @@
 #import "HXMaker.h"
 #import "UIScreen+HXScreen.h"
 #import "UIView+KW_ViewFrame.h"
+#import "RACDefine/RACEXTScope.h"
 
 #endif /* HXExtensionHeader_h */
