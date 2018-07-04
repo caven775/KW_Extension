@@ -170,6 +170,14 @@
  */
 - (nullable NSDictionary *)kw_parametersFromURL;
 
+/**
+ 获取字符串中所有指定子串的range
+
+ @param subString 查找的子串
+ @return NSArray <NSValue *>
+ */
+- (NSArray <NSValue *>*)hx_allRangesWithSubString:(NSString *)subString;
+
 @end
 
 

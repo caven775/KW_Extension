@@ -312,6 +312,21 @@
     return KWParametersFromURL(self);
 }
 
+- (NSArray<NSValue *> *)hx_allRangesWithSubString:(NSString *)subString
+{
+    NSAssert(self.length != 0, @"源字符串不能为空");
+    NSAssert(subString.length != 0, @"subString不能为空");
+    NSMutableArray * ranges = [[NSMutableArray alloc] initWithCapacity:0];
+    NSRegularExpression * regular = [NSRegularExpression regularExpressionWithPattern:subString
+                                                                              options:NSRegularExpressionCaseInsensitive
+                                                                                error:nil];
+    NSArray * array = [regular matchesInString:self options:0 range:NSMakeRange(0, self.length)];
+    for (NSTextCheckingResult * result in array) {
+        [ranges addObject:[NSValue valueWithRange:result.range]];
+    }
+    return ranges;
+}
+
 @end
 
 
