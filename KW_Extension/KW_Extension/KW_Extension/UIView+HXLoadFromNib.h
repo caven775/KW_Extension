@@ -41,13 +41,21 @@
 
 @interface UITableView (HXRegisterTableViewCell)
 
-- (void)hx_registerCellWithNib:(Class)tableViewCell;
+- (void)hx_registerCellWithNib:(Class)aClass;
+- (void)hx_registerCellWithClass:(Class)aClass;
+- (void)hx_registerHeaderFooterWithNib:(Class)aClass;
+- (void)hx_registerHeaderFooterWithClass:(Class)aClass;
 
 @end
 
 
 @interface UICollectionView (HXRegisterCollectionViewCell)
 
-- (void)hx_registerCellWithNib:(Class)collectionViewCell;
+- (void)hx_registerCellWithNib:(Class)aClass;
+- (void)hx_registerCellWithClass:(Class)aClass;
+- (void)hx_registerHeaderWithNib:(Class)aClass;
+- (void)hx_registerHeaderWithClass:(Class)aClass;
+- (void)hx_registerFooterWithNib:(Class)aClass;
+- (void)hx_registerFooterWithClass:(Class)aClass;
 
 @end

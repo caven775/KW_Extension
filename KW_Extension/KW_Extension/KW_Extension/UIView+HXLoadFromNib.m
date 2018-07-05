@@ -78,19 +78,71 @@
 
 @implementation UITableView (HXRegisterTableViewCell)
 
-- (void)hx_registerCellWithNib:(Class)tableViewCell
+- (void)hx_registerCellWithNib:(Class)aClass
 {
-    [self registerNib:[self hx_nibWithClass:tableViewCell] forCellReuseIdentifier:NSStringFromClass(tableViewCell)];
+    [self registerNib:[self hx_nibWithClass:aClass] forCellReuseIdentifier:NSStringFromClass(aClass)];
+}
+
+- (void)hx_registerCellWithClass:(Class)aClass
+{
+    [self registerClass:aClass forCellReuseIdentifier:NSStringFromClass(aClass)];
+}
+
+- (void)hx_registerHeaderFooterWithNib:(Class)aClass
+{
+    [self registerNib:[self hx_nibWithClass:aClass] forHeaderFooterViewReuseIdentifier:NSStringFromClass(aClass)];
+}
+
+- (void)hx_registerHeaderFooterWithClass:(Class)aClass
+{
+    [self registerClass:aClass forHeaderFooterViewReuseIdentifier:NSStringFromClass(aClass)];
 }
 
 @end
 
 @implementation UICollectionView (HXRegisterCollectionViewCell)
 
-- (void)hx_registerCellWithNib:(Class)collectionViewCell
+- (void)hx_registerCellWithNib:(Class)aClass
 {
-    [self registerNib:[self hx_nibWithClass:collectionViewCell] forCellWithReuseIdentifier:NSStringFromClass(collectionViewCell)];
+    [self registerNib:[self hx_nibWithClass:aClass] forCellWithReuseIdentifier:NSStringFromClass(aClass)];
 }
+
+- (void)hx_registerCellWithClass:(Class)aClass
+{
+    [self registerClass:aClass forCellWithReuseIdentifier:NSStringFromClass(aClass)];
+}
+
+- (void)hx_registerHeaderWithNib:(Class)aClass
+{
+    [self hx_registerHeaderFooterWithNib:aClass headerFooter:UICollectionElementKindSectionHeader];
+}
+
+- (void)hx_registerHeaderWithClass:(Class)aClass
+{
+    [self hx_registerHeaderFooterWithClass:aClass headerFooter:UICollectionElementKindSectionHeader];
+}
+
+- (void)hx_registerFooterWithNib:(Class)aClass
+{
+    [self hx_registerHeaderFooterWithNib:aClass headerFooter:UICollectionElementKindSectionFooter];
+}
+
+- (void)hx_registerFooterWithClass:(Class)aClass
+{
+    [self hx_registerHeaderFooterWithClass:aClass headerFooter:UICollectionElementKindSectionFooter];
+}
+
+- (void)hx_registerHeaderFooterWithNib:(Class)aClass headerFooter:(NSString *)headerFooter
+{
+    [self registerNib:[self hx_nibWithClass:aClass] forSupplementaryViewOfKind:headerFooter withReuseIdentifier:NSStringFromClass(aClass)];
+}
+
+- (void)hx_registerHeaderFooterWithClass:(Class)aClass
+                            headerFooter:(NSString *)headerFooter
+{
+    [self registerClass:aClass forSupplementaryViewOfKind:headerFooter withReuseIdentifier:NSStringFromClass(aClass)];
+}
+
 
 @end
 
