@@ -1,14 +1,14 @@
 //
-//  UIView+KW_ViewFrame.m
+//  UIView+HXFrame.m
 //  KW_Extension
 //
 //  Created by LKW on 2018/5/31.
 //  Copyright © 2018年 Udo. All rights reserved.
 //
 
-#import "UIView+KW_ViewFrame.h"
+#import "UIView+HXFrame.h"
 
-@implementation UIView (KW_ViewFrame)
+@implementation UIView (HXFrame)
 
 - (CGFloat)kw_x
 {

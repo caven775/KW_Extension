@@ -23,3 +23,7 @@
 + (CGFloat)hx_scale_5s:(CGFloat)size;
 
 @end
+
+FOUNDATION_EXTERN CGFloat HXScaleiPhone6(CGFloat size);
+FOUNDATION_EXTERN CGFloat HXScaleiPhoneSE(CGFloat size);
+

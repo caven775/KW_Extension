@@ -92,3 +92,13 @@
 }
 
 @end
+
+CGFloat HXScaleiPhone6(CGFloat size)
+{
+    return [UIScreen hx_scale_6:size];
+}
+
+CGFloat HXScaleiPhoneSE(CGFloat size)
+{
+    return [UIScreen hx_scale_5s:size];
+}

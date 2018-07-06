@@ -1,5 +1,5 @@
 //
-//  UIView+KW_ViewFrame.h
+//  UIView+HXFrame.h
 //  KW_Extension
 //
 //  Created by LKW on 2018/5/31.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (KW_ViewFrame)
+@interface UIView (HXFrame)
 
 @property (nonatomic, assign) CGFloat kw_x;
 @property (nonatomic, assign) CGFloat kw_y;
@@ -29,7 +29,7 @@
 @property (nonatomic, assign, readonly) CGFloat kw_midX;
 @property (nonatomic, assign, readonly) CGFloat kw_midY;
 
-@property (nonatomic, assign, readonly) BOOL kw_rectEmpty;
 @property (nonatomic, assign, readonly) BOOL kw_rectNull;
+@property (nonatomic, assign, readonly) BOOL kw_rectEmpty;
 
 @end

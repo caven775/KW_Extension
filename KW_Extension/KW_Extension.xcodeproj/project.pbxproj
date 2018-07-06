@@ -27,10 +27,10 @@
 		129E4B3820BF95120032DCA0 /* KW_ExtensionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B3720BF95120032DCA0 /* KW_ExtensionUITests.m */; };
 		129E4B4820BF95610032DCA0 /* KW_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4720BF95610032DCA0 /* KW_Extension.m */; };
 		129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B4A20BF95E40032DCA0 /* KW_Function.m */; };
-		129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */; };
 		3E26484E20EBBD1C00595655 /* UIView+HXLoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E26484D20EBBD1C00595655 /* UIView+HXLoadFromNib.m */; };
 		3E691CB120CFF51E00CC3E29 /* HXMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E691CB020CFF51E00CC3E29 /* HXMaker.m */; };
 		3E691CB420D00CFF00CC3E29 /* UIScreen+HXScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E691CB320D00CFF00CC3E29 /* UIScreen+HXScreen.m */; };
+		3FADAC6920EF412100CC8476 /* UIView+HXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FADAC6820EF412100CC8476 /* UIView+HXFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,6 @@
 		129E4B4720BF95610032DCA0 /* KW_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Extension.m; sourceTree = "<group>"; };
 		129E4B4920BF95E40032DCA0 /* KW_Function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KW_Function.h; sourceTree = "<group>"; };
 		129E4B4A20BF95E40032DCA0 /* KW_Function.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KW_Function.m; sourceTree = "<group>"; };
-		129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KW_ViewFrame.h"; sourceTree = "<group>"; };
-		129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KW_ViewFrame.m"; sourceTree = "<group>"; };
 		3E26484820EBBA4E00595655 /* HXExtensionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXExtensionHeader.h; sourceTree = "<group>"; };
 		3E26484C20EBBD1C00595655 /* UIView+HXLoadFromNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HXLoadFromNib.h"; sourceTree = "<group>"; };
 		3E26484D20EBBD1C00595655 /* UIView+HXLoadFromNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HXLoadFromNib.m"; sourceTree = "<group>"; };
@@ -102,6 +100,8 @@
 		3E691CB320D00CFF00CC3E29 /* UIScreen+HXScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+HXScreen.m"; sourceTree = "<group>"; };
 		3FADABFF20ECC40000CC8476 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
 		3FADAC0020ECC40000CC8476 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
+		3FADAC6720EF412100CC8476 /* UIView+HXFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HXFrame.h"; sourceTree = "<group>"; };
+		3FADAC6820EF412100CC8476 /* UIView+HXFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HXFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +219,8 @@
 				3E691CB020CFF51E00CC3E29 /* HXMaker.m */,
 				3E691CB220D00CFF00CC3E29 /* UIScreen+HXScreen.h */,
 				3E691CB320D00CFF00CC3E29 /* UIScreen+HXScreen.m */,
-				129E4B5220BF98940032DCA0 /* UIView+KW_ViewFrame.h */,
-				129E4B5320BF98940032DCA0 /* UIView+KW_ViewFrame.m */,
+				3FADAC6720EF412100CC8476 /* UIView+HXFrame.h */,
+				3FADAC6820EF412100CC8476 /* UIView+HXFrame.m */,
 				3E26484C20EBBD1C00595655 /* UIView+HXLoadFromNib.h */,
 				3E26484D20EBBD1C00595655 /* UIView+HXLoadFromNib.m */,
 				128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */,
@@ -379,13 +379,13 @@
 				1263A49520CE5939001143B4 /* KW_UserLocationModule.m in Sources */,
 				129E4B4B20BF95E40032DCA0 /* KW_Function.m in Sources */,
 				129E4B2320BF95120032DCA0 /* main.m in Sources */,
+				3FADAC6920EF412100CC8476 /* UIView+HXFrame.m in Sources */,
 				3E26484E20EBBD1C00595655 /* UIView+HXLoadFromNib.m in Sources */,
 				3E691CB120CFF51E00CC3E29 /* HXMaker.m in Sources */,
 				1263A49220CE5920001143B4 /* KW_AppVersionModule.m in Sources */,
 				1263A48A20CE5290001143B4 /* KW_AppDelegateModule.m in Sources */,
 				128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */,
 				3E691CB420D00CFF00CC3E29 /* UIScreen+HXScreen.m in Sources */,
-				129E4B5420BF98940032DCA0 /* UIView+KW_ViewFrame.m in Sources */,
 				1263A48F20CE5910001143B4 /* KW_NotificationModule.m in Sources */,
 				1263A49820CE5CD1001143B4 /* KW_ThirdPlatformModule.m in Sources */,
 				129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */,
