@@ -389,5 +389,53 @@
 @end
 
 
+@implementation UIAlertController (HXAlert)
+
+- (void)hx_addActions:(NSArray<UIAlertAction *> *)actions
+{
+    [actions enumerateObjectsUsingBlock:^(UIAlertAction * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self addAction:obj];
+    }];
+}
+
+- (void)hx_show
+{
+    [[[[[UIApplication sharedApplication] delegate] window] rootViewController] presentViewController:self
+                                                                                             animated:YES
+                                                                                           completion:nil];
+}
+
+@end
+
+
+
+
+
+#import "KW_Function.h"
+#import "NSObject+KW_MethodSwizzling.h"
+
+@implementation UIViewController (HXPresentViewController)
+
++ (void)load
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self methodSwizzlingWithOriginalSelector:@selector(presentViewController:animated:completion:)
+                               bySwizzledSelector:@selector(hx_presentViewController:animated:completion:)];
+    });
+}
+
+- (void)hx_presentViewController:(UIViewController *)viewControllerToPresent
+                        animated:(BOOL)flag
+                      completion:(void (^)(void))completion
+{
+    [KWCurrentVisibleViewController() hx_presentViewController:viewControllerToPresent
+                                                      animated:flag
+                                                    completion:completion];
+}
+
+@end
+
+
 
 

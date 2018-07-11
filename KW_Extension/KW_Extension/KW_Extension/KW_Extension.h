@@ -204,3 +204,20 @@
 
 @end
 
+
+@interface UIAlertController (HXAlert)
+
+- (void)hx_addActions:(NSArray <UIAlertAction *>*)actions;
+
+- (void)hx_show;
+
+@end
+
+
+@interface UIViewController (HXPresentViewController)
+
+
+@end
+
+
+
