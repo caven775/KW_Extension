@@ -31,6 +31,7 @@
 		3E691CB120CFF51E00CC3E29 /* HXMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E691CB020CFF51E00CC3E29 /* HXMaker.m */; };
 		3E691CB420D00CFF00CC3E29 /* UIScreen+HXScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E691CB320D00CFF00CC3E29 /* UIScreen+HXScreen.m */; };
 		3FADAC6920EF412100CC8476 /* UIView+HXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FADAC6820EF412100CC8476 /* UIView+HXFrame.m */; };
+		3FD8557420F60664002CE9AE /* UIAlertController+HXAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8557320F60664002CE9AE /* UIAlertController+HXAlert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		3FADAC0020ECC40000CC8476 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
 		3FADAC6720EF412100CC8476 /* UIView+HXFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+HXFrame.h"; sourceTree = "<group>"; };
 		3FADAC6820EF412100CC8476 /* UIView+HXFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HXFrame.m"; sourceTree = "<group>"; };
+		3FD8557220F60664002CE9AE /* UIAlertController+HXAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+HXAlert.h"; sourceTree = "<group>"; };
+		3FD8557320F60664002CE9AE /* UIAlertController+HXAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+HXAlert.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 				3E26484D20EBBD1C00595655 /* UIView+HXLoadFromNib.m */,
 				128C9B6420CA6C6300993B9B /* NSArray+KW_SafeArray.h */,
 				128C9B6520CA6C6300993B9B /* NSArray+KW_SafeArray.m */,
+				3FD8557220F60664002CE9AE /* UIAlertController+HXAlert.h */,
+				3FD8557320F60664002CE9AE /* UIAlertController+HXAlert.m */,
 				128C9B6A20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.h */,
 				128C9B6B20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m */,
 				128C9B6720CA6CC800993B9B /* NSObject+KW_MethodSwizzling.h */,
@@ -387,6 +392,7 @@
 				128C9B6C20CA6D2B00993B9B /* NSDictionary+KW_SafeDictionary.m in Sources */,
 				3E691CB420D00CFF00CC3E29 /* UIScreen+HXScreen.m in Sources */,
 				1263A48F20CE5910001143B4 /* KW_NotificationModule.m in Sources */,
+				3FD8557420F60664002CE9AE /* UIAlertController+HXAlert.m in Sources */,
 				1263A49820CE5CD1001143B4 /* KW_ThirdPlatformModule.m in Sources */,
 				129E4B1520BF95100032DCA0 /* AppDelegate.m in Sources */,
 				128C9B6920CA6CC800993B9B /* NSObject+KW_MethodSwizzling.m in Sources */,
