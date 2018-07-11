@@ -314,8 +314,8 @@
 
 - (NSArray<NSValue *> *)hx_allRangesWithSubString:(NSString *)subString
 {
-    NSAssert(self.length != 0, @"源字符串不能为空");
-    NSAssert(subString.length != 0, @"subString不能为空");
+    NSAssert(self.length != 0, @"%@不能为空", self);
+    NSAssert(subString.length != 0, @"%@不能为空", subString);
     NSMutableArray * ranges = [[NSMutableArray alloc] initWithCapacity:0];
     NSRegularExpression * regular = [NSRegularExpression regularExpressionWithPattern:subString
                                                                               options:NSRegularExpressionCaseInsensitive
