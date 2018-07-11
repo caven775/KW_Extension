@@ -410,8 +410,6 @@
 
 
 
-
-#import "KW_Function.h"
 #import "NSObject+KW_MethodSwizzling.h"
 
 @implementation UIViewController (HXPresentViewController)
