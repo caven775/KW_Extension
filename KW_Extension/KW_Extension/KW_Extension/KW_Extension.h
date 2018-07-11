@@ -183,8 +183,8 @@
 
 @interface NSArray (KW_Array)
 
+@property (nonatomic, strong, readonly) id anyObject;
 @property (nonatomic, copy, readonly) NSString * base64Encode;
-
 
 - (NSArray *)kw_allObjects;
 

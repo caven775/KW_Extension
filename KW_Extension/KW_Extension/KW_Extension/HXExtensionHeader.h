@@ -13,7 +13,7 @@
 #import "KW_Function.h"
 #import "HXMaker.h"
 #import "UIScreen+HXScreen.h"
-#import "UIView+KW_ViewFrame.h"
+#import "UIView+HXFrame.h"
 #import "RACDefine/RACEXTScope.h"
 
 #endif /* HXExtensionHeader_h */

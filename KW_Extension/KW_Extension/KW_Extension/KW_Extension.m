@@ -8,7 +8,7 @@
 
 #import "KW_Extension.h"
 #import "KW_Function.h"
-#import "UIView+KW_ViewFrame.h"
+#import "UIView+HXFrame.h"
 #import <objc/runtime.h>
 
 @implementation KW_Extension
@@ -331,6 +331,14 @@
 
 
 @implementation NSArray (KW_Array)
+
+- (id)anyObject
+{
+    if (!self.count) { return nil;}
+    if (self.count == 1) { return [self firstObject];}
+    NSInteger idx = arc4random() % self.count;
+    return [self objectAtIndex:idx];
+}
 
 - (NSString *)base64Encode
 {
