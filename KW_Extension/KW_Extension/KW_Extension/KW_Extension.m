@@ -427,9 +427,14 @@
                         animated:(BOOL)flag
                       completion:(void (^)(void))completion
 {
-    [KWCurrentVisibleViewController() hx_presentViewController:viewControllerToPresent
-                                                      animated:flag
-                                                    completion:completion];
+    if (self != viewControllerToPresent) {
+        [KWCurrentVisibleViewController() hx_presentViewController:viewControllerToPresent
+                                                          animated:flag
+                                                        completion:completion];
+    } else {
+        NSLog(@"could not use %@ present %@", NSStringFromClass([self class]),
+               NSStringFromClass([viewControllerToPresent class]));
+    }
 }
 
 @end
