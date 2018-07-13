@@ -14,6 +14,11 @@
 # define KWLog(...);
 #endif
 
+typedef NS_ENUM(NSInteger, HXSortArrayType) {
+    HXSortArrayAscending,
+    HXSortArrayDescending
+};
+
 @interface KW_Function : NSObject
 
 @end
@@ -70,5 +75,33 @@ FOUNDATION_EXTERN UIViewController * KWFindVisibleViewController(UIViewControlle
  @return 参数字典
  */
 FOUNDATION_EXTERN NSDictionary * KWParametersFromURL(NSString * url);
+
+/**
+ 获取最大数
+
+ @param number 比较参数
+ @param ... 参数列表
+ @return 最大值
+ */
+FOUNDATION_EXTERN NSNumber * HXMAX(NSNumber * number, ...);
+
+/**
+ 获取最小数
+
+ @param number 比较参数
+ @param ... 参数列表
+ @return 最小值
+ */
+FOUNDATION_EXTERN NSNumber * HXMIN(NSNumber * number, ...);
+
+/**
+ 数组排序
+
+ @param array 排序数组
+ @param sortType 排序方式
+ @return 排序结果
+ 
+ */
+FOUNDATION_EXTERN NSArray * HXSortArray(NSArray * array, HXSortArrayType sortType);
 
 

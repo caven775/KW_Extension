@@ -106,3 +106,50 @@ NSDictionary * KWParametersFromURL(NSString * url)
     }
     return parameters;
 }
+
+NSArray * HXSortArray(NSArray * array, HXSortArrayType sortType)
+{
+    NSArray * sortArray = nil;
+    sortArray = [[array copy] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        if (sortType == HXSortArrayAscending) {
+            if ([obj1 compare:obj2] == NSOrderedDescending) {
+                return NSOrderedDescending;
+            }
+            return NSOrderedAscending;
+        } else {
+            if ([obj1 compare:obj2] == NSOrderedDescending) {
+                return NSOrderedAscending;
+            }
+            return NSOrderedDescending;
+        }
+    }];
+    return sortArray;
+}
+
+NSNumber * HXMAX(NSNumber * number, ...)
+{
+    NSMutableArray * numbers = [[NSMutableArray alloc] initWithCapacity:0];
+    va_list args;
+    va_start(args, number);
+    id x = number;
+    while (x) {
+        [numbers addObject:x];
+        x = va_arg(args, id);
+    }
+    va_end(args);
+    return [HXSortArray(numbers, HXSortArrayAscending) lastObject];
+}
+
+NSNumber * HXMIN(NSNumber * number, ...)
+{
+    NSMutableArray * numbers = [[NSMutableArray alloc] initWithCapacity:0];
+    va_list args;
+    va_start(args, number);
+    id x = number;
+    while (x) {
+        [numbers addObject:x];
+        x = va_arg(args, id);
+    }
+    va_end(args);
+    return [HXSortArray(numbers, HXSortArrayAscending) firstObject];
+}

@@ -23,8 +23,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    TestViewController * test = [[TestViewController alloc] init];
-    [self presentViewController:test animated:YES completion:nil];
+//    TestViewController * test = [[TestViewController alloc] init];
+//    [self presentViewController:test animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
