@@ -12,6 +12,8 @@
 
 @end
 
+#pragma mark  UIDevice 
+
 @interface UIDevice (HXDeviceInfo)
 
 @property (nonatomic, copy, readonly, class) NSString * UUID;
@@ -23,6 +25,7 @@
 
 @end
 
+#pragma mark  NSObject 
 
 @interface NSObject (KW_Object)
 
@@ -38,6 +41,7 @@
 
 @end
 
+#pragma mark  UIView 
 
 @interface UIView (KW_View)
 
@@ -74,6 +78,7 @@
 
 @end
 
+#pragma mark  NSString 
 
 @interface NSString (KW_String)
 
@@ -178,8 +183,10 @@
  */
 - (NSArray <NSValue *>*)hx_allRangesWithSubString:(NSString *)subString;
 
+
 @end
 
+#pragma mark  NSArray 
 
 @interface NSArray (KW_Array)
 
@@ -190,6 +197,7 @@
 
 @end
 
+#pragma mark  NSDictionary 
 
 @interface NSDictionary (KW_Dictionary)
 
@@ -197,6 +205,7 @@
 
 @end
 
+#pragma mark  NSDateFormatter 
 
 @interface NSDateFormatter (KW_DateFormatter)
 
@@ -204,6 +213,7 @@
 
 @end
 
+#pragma mark  UIAlertController 
 
 @interface UIAlertController (HXAlert)
 
@@ -213,6 +223,7 @@
 
 @end
 
+#pragma mark  UIViewController 
 
 @interface UIViewController (HXPresentViewController)
 

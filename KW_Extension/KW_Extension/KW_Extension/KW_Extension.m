@@ -15,6 +15,8 @@
 
 @end
 
+#pragma mark  UIDevice 
+
 @implementation UIDevice (HXDeviceInfo)
 
 + (NSString *)appVersion
@@ -49,6 +51,7 @@
 
 @end
 
+#pragma mark  NSObject 
 
 @implementation NSObject (KW_Object)
 
@@ -64,7 +67,7 @@
 
 @end
 
-
+#pragma mark  UIView 
 
 @implementation UIView (KW_View)
 
@@ -113,6 +116,7 @@
 
 @end
 
+#pragma mark  UIColor 
 
 @implementation UIColor (KW_Color)
 
@@ -213,6 +217,9 @@
 @end
 
 
+#pragma mark  NSString 
+
+#include <time.h>
 
 @implementation NSString (KW_String)
 
@@ -329,6 +336,7 @@
 
 @end
 
+#pragma mark  NSArray 
 
 @implementation NSArray (KW_Array)
 
@@ -366,6 +374,7 @@
 
 @end
 
+#pragma mark  NSDictionary 
 
 @implementation NSDictionary (KW_Dictionary)
 
@@ -376,6 +385,7 @@
 
 @end
 
+#pragma mark  NSDateFormatter 
 
 @implementation NSDateFormatter (KW_DateFormatter)
 
@@ -388,6 +398,7 @@
 
 @end
 
+#pragma mark  UIAlertController 
 
 @implementation UIAlertController (HXAlert)
 
@@ -408,7 +419,7 @@
 @end
 
 
-
+#pragma mark  UIViewController 
 
 #import "NSObject+KW_MethodSwizzling.h"
 
