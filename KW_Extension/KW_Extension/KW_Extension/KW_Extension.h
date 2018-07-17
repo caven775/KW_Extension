@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define weaky(obj) autoreleasepool{} __weak typeof(obj) obj##Weak = obj;
+#define strongy(obj) autoreleasepool{} __strong typeof(obj) obj = obj##Weak;
+
 @interface KW_Extension : NSObject
 
 @end
