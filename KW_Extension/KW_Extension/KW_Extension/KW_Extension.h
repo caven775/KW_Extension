@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #define HXKEYWORDIFY autoreleasepool{}
-#define weaky(obj) HXKEYWORDIFY __weak typeof(obj) obj##Weak = obj;
-#define strongy(obj) HXKEYWORDIFY __strong typeof(obj) obj = obj##Weak;
+#define weakly(obj) HXKEYWORDIFY __weak typeof(obj) obj##Weak = obj;
+#define strongly(obj) HXKEYWORDIFY __strong typeof(obj) obj = obj##Weak;
 
 // 两个已有的宏
 #define STRINGIFY(S) #S
