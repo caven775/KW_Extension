@@ -8,10 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-#define weaky(obj) autoreleasepool{} __weak typeof(obj) obj##Weak = obj;
-#define strongy(obj) autoreleasepool{} __strong typeof(obj) obj = obj##Weak;
+#define HXKEYWORDIFY autoreleasepool{}
+#define weaky(obj) HXKEYWORDIFY __weak typeof(obj) obj##Weak = obj;
+#define strongy(obj) HXKEYWORDIFY __strong typeof(obj) obj = obj##Weak;
+
+// 两个已有的宏
+#define STRINGIFY(S) #S
+#define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
+// 延迟1次展开的宏
+#define DEFER_STRINGIFY(S) STRINGIFY(S)
+// 下面的宏在第一行用`\`折行
+#define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n"  \
+DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
+#define TODO(MSG) try {} @catch (...) {} PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
 
 @interface KW_Extension : NSObject
+
 
 @end
 
