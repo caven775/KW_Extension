@@ -77,6 +77,15 @@ FOUNDATION_EXTERN UIViewController * KWFindVisibleViewController(UIViewControlle
 FOUNDATION_EXTERN NSDictionary * KWParametersFromURL(NSString * url);
 
 /**
+ 给url追加参数
+
+ @param baseURL url
+ @param parameters 参数
+ @return url
+ */
+FOUNDATION_EXTERN NSURL * KWParametersToURL(NSString * baseURL, NSDictionary * parameters);
+
+/**
  获取最大数
 
  @param number 比较参数

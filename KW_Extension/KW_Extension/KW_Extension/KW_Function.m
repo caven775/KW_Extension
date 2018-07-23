@@ -107,6 +107,33 @@ NSDictionary * KWParametersFromURL(NSString * url)
     return parameters;
 }
 
+void HXAddURLQueryItemWithParameters(NSDictionary * parameters, NSMutableArray * items)
+{
+    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if (!obj) { obj = [NSNull null];}
+        NSURLQueryItem * item = [[NSURLQueryItem alloc] initWithName:key value:obj];
+        [items addObject:item];
+    }];
+}
+
+NSURL * KWParametersToURL(NSString * baseURL, NSDictionary * parameters)
+{
+    NSURL * url = [NSURL URLWithString:baseURL];
+    if (!parameters.allKeys.count) { return url;}
+    NSURLComponents * components = [NSURLComponents componentsWithString:baseURL];
+    if (!components) { return url;}
+    NSDictionary * originalParameters = KWParametersFromURL(baseURL);
+    NSMutableArray <NSURLQueryItem *>* items = [[NSMutableArray alloc] initWithCapacity:parameters.allKeys.count];
+    if (originalParameters) {
+        HXAddURLQueryItemWithParameters(originalParameters, items);
+    }
+    HXAddURLQueryItemWithParameters(parameters, items);
+    [components setQueryItems:items];
+    return components.URL;
+}
+
+
+
 NSArray * HXSortArray(NSArray * array, HXSortArrayType sortType)
 {
     NSArray * sortArray = nil;
