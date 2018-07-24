@@ -109,8 +109,16 @@ FOUNDATION_EXTERN NSNumber * HXMIN(NSNumber * number, ...);
  @param array 排序数组
  @param sortType 排序方式
  @return 排序结果
- 
  */
 FOUNDATION_EXTERN NSArray * HXSortArray(NSArray * array, HXSortArrayType sortType);
+
+/**
+ 简化NSString 的 initWithFormat
+
+ @param format format
+ @param ... 参数
+ @return NSString
+ */
+FOUNDATION_EXTERN NSString * HXSS(NSString * format, ...);
 
 

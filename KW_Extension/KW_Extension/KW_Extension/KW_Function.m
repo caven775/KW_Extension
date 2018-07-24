@@ -132,8 +132,6 @@ NSURL * KWParametersToURL(NSString * baseURL, NSDictionary * parameters)
     return components.URL;
 }
 
-
-
 NSArray * HXSortArray(NSArray * array, HXSortArrayType sortType)
 {
     NSArray * sortArray = nil;
@@ -179,4 +177,16 @@ NSNumber * HXMIN(NSNumber * number, ...)
     }
     va_end(args);
     return [HXSortArray(numbers, HXSortArrayAscending) firstObject];
+}
+
+NSString * HXSS(NSString * format, ...)
+{
+    va_list args;
+    NSString * string = nil;
+    if (format) {
+        va_start(args, format);
+        string = [[NSString alloc] initWithFormat:format arguments:args];
+        va_end(args);
+    }
+    return string;
 }
