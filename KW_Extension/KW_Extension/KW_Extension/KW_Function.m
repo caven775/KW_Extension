@@ -190,3 +190,16 @@ NSString * HXSS(NSString * format, ...)
     }
     return string;
 }
+
+UIImage * HXImage(NSString * imageName)
+{
+    return [UIImage imageNamed:imageName];
+}
+
+UIImage * HXImageFromFile(NSString * imageName, NSString * type)
+{
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    imageName = [imageName stringByAppendingString:HXSS(@"%@%@x", @"@", @(scale))];
+    NSString * path = [[NSBundle mainBundle] pathForResource:imageName ofType:type];
+    return [[UIImage alloc] initWithContentsOfFile:path];
+}

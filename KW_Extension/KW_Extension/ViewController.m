@@ -25,6 +25,11 @@
 {
 //    TestViewController * test = [[TestViewController alloc] init];
 //    [self presentViewController:test animated:YES completion:nil];
+    
+    NSString * imageName = @"bankImage";
+    UIImage * image = HXImageFromFile(imageName, @"png");
+    UIImage * test = HXImage(@"test");
+    NSLog(@"image == %@ test == %@", image, test);
 }
 
 - (void)didReceiveMemoryWarning {

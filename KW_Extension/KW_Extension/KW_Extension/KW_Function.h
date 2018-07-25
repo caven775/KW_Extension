@@ -121,4 +121,8 @@ FOUNDATION_EXTERN NSArray * HXSortArray(NSArray * array, HXSortArrayType sortTyp
  */
 FOUNDATION_EXTERN NSString * HXSS(NSString * format, ...);
 
+FOUNDATION_EXTERN UIImage * HXImage(NSString * imageName);
+
+FOUNDATION_EXTERN UIImage * HXImageFromFile(NSString * imageName, NSString * type);
+
 
